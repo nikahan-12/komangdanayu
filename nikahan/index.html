@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Undangan Pawiwahan</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
+    <link href="https://fonts.googleapis.com/css?family=Great+Vibes" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body class="cover-aktif">
+
+    <!-- layar pembuka -->
+    <div id="cover">
+        <div>
+            <h4 class="text-light mb-4">ᬒᬁᬲ᭄ᬯᬲ᭄ᬢ᭄ᬬᬲ᭄ᬢᬸ</h4>
+            <p class="mb-2">Undangan Pawiwahan</p>
+            <p class="judul mb-4">Komang &amp; Ayu</p>
+            <p class="mb-1">Kepada Yth.</p>
+            <h2 id="namaCover" class="mb-4">Tamu Undangan</h2>
+            <button id="btnBuka" type="button" class="btn btn-light px-4">
+                <i class="fa-solid fa-envelope-open me-2"></i> Buka Undangan
+            </button>
+        </div>
+    </div>
+
+    <div class="container-fluid">
+        <!-- nav -->
+        <div class="row">
+            <div class="col mx-auto">
+                <picture>
+                    <source srcset="img/nav.png" alt="" media="(min-width: 768px)" />
+                    <img src="img/nav-mobile.png" class="d-block w-100" alt="..." />
+                </picture>
+            </div>
+        </div>
+
+        <div class="container mt-5">
+            <!-- nama tamu -->
+            <div class="row mt-4">
+                <div class="col-12 text-center">
+                    <p class="mb-1">Kepada Yth.</p>
+                    <h1 id="nama" class="nama text1"></h1>
+                </div>
+            </div>
+
+            <div class="row mt-5">
+                <div class="col-12 mx-auto mt-5">
+                    <h4 class="text-light text-center">ᬒᬁᬲ᭄ᬯᬲ᭄ᬢ᭄ᬬᬲ᭄ᬢᬸ</h4>
+                    <h1 class="text1 mt-5">Om Swastyastu</h1>
+                </div>
+            </div>
+
+            <!-- text -->
+            <div class="row mt-2">
+                <div class="col-sm-7 mx-auto mt-5">
+                    <p>
+                        Atas Asung Kertha Wara Nugraha Ida Sang Hyang Widhi Wasa/Tuhan
+                        Yang Maha Esa kami bermaksud mengundang Bapak/Ibu/Saudara/i pada
+                        Upacara Manusa Yadnya Pawiwahan (Pernikahan) Putra Putri kami.
+                    </p>
+                </div>
+            </div>
+
+            <!-- foto -->
+            <div class="row mt-4">
+                <div class="col-10 col-sm-6 mx-auto mt-4">
+                    <img src="img/ayu.jpeg" alt="Foto mempelai"
+                        class="img-fluid rounded-4 shadow d-block mx-auto foto-mempelai" />
+                </div>
+            </div>
+
+            <!-- mempelai -->
+            <div class="row mt-3">
+                <div class="col-sm-10 mx-auto mt-5">
+                    <h1 class="text1 mt-1 fs-4">Dewa Komang Sarjana</h1>
+                    <h1 class="text1 mt-3 fs-4">&amp;</h1>
+                    <h1 class="text1 mt-3 fs-4">Desak Ketut Ayu Susilasari</h1>
+                </div>
+            </div>
+
+            <!-- orang tua mempelai pria -->
+            <div class="row mt-1">
+                <div class="col-sm-10 mx-auto mt-5">
+                    <p>Putra dari pasangan</p>
+                    <h3 class="text-light fs-4">Dewa Made Sutha</h3>
+                    <h3 class="text-light fs-4">dan</h3>
+                    <h3 class="text-light fs-4">Desak Kayan Jame</h3>
+                </div>
+            </div>
+
+            <!-- orang tua mempelai wanita -->
+            <div class="row mt-5">
+                <div class="col-sm-10 mx-auto mt-5">
+                    <p>Putri dari pasangan</p>
+                    <h3 class="text-light fs-4">Dewa Kayan Raka Satiawan</h3>
+                    <h3 class="text-light fs-4">dan</h3>
+                    <h3 class="text-light fs-4">Ni Wayan Sumiartini</h3>
+                </div>
+            </div>
+        </div>
+
+        <!-- nav2 -->
+        <div class="row mt-5">
+            <div class="col mx-auto">
+                <picture>
+                    <source srcset="img/nav2.png" alt="" media="(min-width: 768px)" />
+                    <img src="img/nav-mobile2.png" class="d-block w-100" alt="..." />
+                </picture>
+            </div>
+        </div>
+
+        <div class="container">
+            <!-- box1 -->
+            <div class="row mt-5 bg1">
+                <div class="row mx-auto">
+                    <div class="col-sm-10 mx-auto mt-2">
+                        <img src="img/imgnv.png" alt="" class="col-12" />
+                    </div>
+                </div>
+                <div class="row mx-auto">
+                    <div class="col-sm-9 mx-auto mt-5">
+                        <p>
+                            Merupakan suatu kebahagiaan bagi kami apabila
+                            Bapak/Ibu/Saudara/i berkenan untuk hadir dan memberikan doa
+                            restu pada :
+                        </p>
+                    </div>
+                </div>
+                <div class="row mx-auto">
+                    <div class="col-sm-10 mx-auto mt-3">
+                        <h1 class="text1 mt-1">Sabtu, 12 Desember 2026</h1>
+                        <h1 class="text1 mt-1">Pukul 17.00 Wita - Selesai</h1>
+                    </div>
+                </div>
+                <div class="row mx-auto">
+                    <div class="col-sm-10 mx-auto mt-3 mb-5">
+                        <h3 class="text1 mt-1">Dasan Tapen, Kec. Gerung, Kabupaten Lombok Barat, Nusa Tenggara Bar. 83363</h3>
+                    </div>
+                </div>
+                <!-- lokasi -->
+                <div class="row mx-auto">
+                    <div class="col-xl-2 mx-auto">
+                        <a href="https://maps.app.goo.gl/zaaeTgVWFa23yCmFA">
+                            <button type="button" class="btn btn-light d-grid gap-1 col-sm-3 mx-auto">
+                                <i class="fa-solid fa-map-location-dot mx-auto col-12"></i>
+                            </button>
+                        </a>
+                    </div>
+                </div>
+                <!-- lokasi -->
+                <div class="row mx-auto">
+                    <div class="col mx-auto">
+                        <p class="text-center">lokasi</p>
+                    </div>
+                </div>
+                <div class="row mx-auto">
+                    <div class="col-md-9 mx-auto mb-5 mt-3">
+                        <iframe class="peta"
+                            src="https://maps.google.com/maps?q=-8.6568669,116.1427992&z=17&output=embed"
+                            allowfullscreen="" loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                </div>
+                <div class="row mx-auto">
+                    <div class="col-sm-9 mx-auto">
+                        <p class="fs-3">
+                            Atas kehadiran dan doa restunya kami ucapkan terimakasih
+                        </p>
+                    </div>
+                </div>
+                <div class="row mx-auto mt-2">
+                    <div class="col-sm-10 mx-auto">
+                        <img src="img/imgnv2.png" alt="" class="col-12" />
+                    </div>
+                </div>
+            </div>
+
+            <div class="row mx-auto mt-5">
+                <div class="col-sm-9 mx-auto">
+                    <p class="fs-3">Kami Yang Berbahagia</p>
+                    <p class="fs-3">Keluarga</p>
+                    <h2 class="text-light">Dewa Made Sutha</h2>
+                    <h2 class="text-light">&amp;</h2>
+                    <h2 class="text-light">Dewa Kayan Raka Satiawan</h2>
+                </div>
+            </div>
+
+            <!-- hadiah / rekening -->
+            <div class="row mx-auto mt-5 pt-4">
+                <div class="col-sm-9 mx-auto text-center">
+                    <h1 class="text1 fs-3">Hadiah Pernikahan</h1>
+                    <p class="mt-3">
+                        Doa restu Bapak/Ibu/Saudara/i adalah hadiah terindah bagi kami.
+                        Namun jika ingin memberikan tanda kasih, dapat melalui :
+                    </p>
+
+                    <div class="card bg-dark text-light border-secondary mx-auto mb-3 kartu-rekening">
+                        <div class="card-body">
+                            <h5 class="card-title">BCA</h5>
+                            <p class="fs-4 mb-1" id="rek1">0561437652</p>
+                            <p class="mb-3">a.n. Desak Ketut Ayu Susilasari</p>
+                            <button type="button" class="btn btn-light btn-sm btn-salin" data-target="rek1">
+                                <i class="fa-regular fa-copy me-1"></i> Salin Nomor
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Rekening ke-2 (hapus blok ini kalau tidak perlu) -->
+                    
+                </div>
+            </div>
+
+            <!-- ucapan -->
+            <div class="row mx-auto mt-5 pt-4 mb-5">
+                <div class="col-sm-9 mx-auto">
+                    <h1 class="text1 fs-3 text-center">Ucapan &amp; Doa</h1>
+
+                    <form id="formUcapan" class="mt-4" autocomplete="off">
+                        <input type="text" id="inputNama" class="form-control mb-2" placeholder="Nama Anda"
+                            maxlength="50" required />
+                        <textarea id="inputPesan" class="form-control mb-2" rows="3"
+                            placeholder="Tulis ucapan dan doa..." maxlength="300" required></textarea>
+                        <button type="submit" id="btnKirim" class="btn btn-light w-100">
+                            <i class="fa-regular fa-paper-plane me-1"></i> Kirim Ucapan
+                        </button>
+                        <p id="statusUcapan" class="small mt-2 mb-0 text-center"></p>
+                    </form>
+
+                    <div id="daftarUcapan" class="mt-4">
+                        <p class="text-center text-secondary">Memuat ucapan...</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- music -->
+        <button id="toggleButton" type="button" class="btn btn-light">
+            <img id="playIcon" src="img/play.png" alt="Play" />
+            <img id="pauseIcon" src="img/pause.png" alt="Pause" />
+        </button>
+
+        <button id="scrollToggleButton" type="button" class="btn btn-light me-3">
+            <i id="scrollStopIcon" class="fa-solid fa-scroll"></i>
+            <i id="scrollStartIcon" class="fa-solid fa-stop"></i>
+        </button>
+        <audio id="myAudio" preload="auto" loop>
+            <source src="music/music.mp3" type="audio/mpeg" />
+            Your browser does not support the audio element.
+        </audio>
+
+        <!-- foot -->
+        <div class="row mt-5">
+            <div class="col mx-auto mt-5">
+                <picture>
+                    <source srcset="img/footer.png" alt="" media="(min-width: 768px)" />
+                    <img src="img/footer.png" class="d-block w-100" alt="..." />
+                </picture>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Nama tamu dari URL (?nama=...)
+        const paramNama = new URLSearchParams(window.location.search).get("nama");
+        const namaTamu = paramNama && paramNama.trim() !== "" ? paramNama.trim() : "Tamu Undangan";
+        document.getElementById("nama").textContent = namaTamu;
+        document.getElementById("namaCover").textContent = namaTamu;
+
+        // Tombol salin nomor rekening
+        document.querySelectorAll(".btn-salin").forEach((btn) => {
+            btn.addEventListener("click", async () => {
+                const teks = document.getElementById(btn.dataset.target).textContent.trim();
+                const asli = btn.innerHTML;
+                try {
+                    await navigator.clipboard.writeText(teks);
+                    btn.innerHTML = '<i class="fa-solid fa-check me-1"></i> Tersalin';
+                } catch (e) {
+                    btn.innerHTML = "Salin manual";
+                }
+                setTimeout(() => (btn.innerHTML = asli), 1800);
+            });
+        });
+    </script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const cover = document.getElementById("cover");
+            const btnBuka = document.getElementById("btnBuka");
+            const toggleButton = document.getElementById("toggleButton");
+            const playIcon = document.getElementById("playIcon");
+            const pauseIcon = document.getElementById("pauseIcon");
+            const audio = document.getElementById("myAudio");
+            const scrollToggleButton = document.getElementById("scrollToggleButton");
+            const scrollStopIcon = document.getElementById("scrollStopIcon");
+            const scrollStartIcon = document.getElementById("scrollStartIcon");
+
+            let isPlaying = false;
+            let isScrolling = true;
+            let scrollInterval;
+
+            const tampilPlay = () => {
+                playIcon.style.display = "none";
+                pauseIcon.style.display = "inline";
+            };
+            const tampilPause = () => {
+                playIcon.style.display = "inline";
+                pauseIcon.style.display = "none";
+            };
+
+            // Audio toggle
+            toggleButton.addEventListener("click", function () {
+                if (!isPlaying) {
+                    audio.play().then(() => {
+                        tampilPlay();
+                        isPlaying = true;
+                    }).catch((error) => {
+                        console.error("Audio playback failed:", error);
+                    });
+                } else {
+                    audio.pause();
+                    tampilPause();
+                    isPlaying = false;
+                }
+            });
+
+            // Auto scroll
+            const startScrolling = () => {
+                clearInterval(scrollInterval);
+                scrollInterval = setInterval(() => {
+                    window.scrollBy({ top: 1, behavior: "smooth" });
+                    if (window.innerHeight + window.pageYOffset >= document.body.offsetHeight) {
+                        clearInterval(scrollInterval);
+                    }
+                }, 20);
+            };
+
+            const stopScrolling = () => clearInterval(scrollInterval);
+
+            scrollToggleButton.addEventListener("click", function () {
+                if (isScrolling) {
+                    stopScrolling();
+                    scrollStopIcon.style.display = "none";
+                    scrollStartIcon.style.display = "inline";
+                } else {
+                    startScrolling();
+                    scrollStopIcon.style.display = "inline";
+                    scrollStartIcon.style.display = "none";
+                }
+                isScrolling = !isScrolling;
+            });
+
+            // Hentikan auto scroll otomatis saat tamu mulai mengisi form
+            document.addEventListener("focusin", function (e) {
+                if (e.target.matches("#formUcapan input, #formUcapan textarea") && isScrolling) {
+                    scrollToggleButton.click();
+                }
+            });
+
+            // Tombol "Buka Undangan": musik otomatis nyala + auto scroll mulai
+            btnBuka.addEventListener("click", function () {
+                audio.play().then(() => {
+                    tampilPlay();
+                    isPlaying = true;
+                }).catch((error) => {
+                    console.error("Audio playback failed:", error);
+                });
+
+                cover.classList.add("tutup");
+                document.body.classList.remove("cover-aktif");
+                window.scrollTo(0, 0);
+                startScrolling();
+            });
+        });
+    </script>
+
+    <!-- Ucapan realtime (Firebase Realtime Database) -->
+    <script type="module">
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js";
+        import {
+            getDatabase, ref, push, onValue, query, orderByChild, limitToLast, serverTimestamp
+        } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-database.js";
+
+        // GANTI dengan config dari Firebase Console kamu
+        const firebaseConfig = {
+            apiKey: "ISI_API_KEY",
+            authDomain: "ISI_PROJECT_ID.firebaseapp.com",
+            databaseURL: "https://ISI_PROJECT_ID-default-rtdb.asia-southeast1.firebasedatabase.app",
+            projectId: "ISI_PROJECT_ID",
+            appId: "ISI_APP_ID"
+        };
+
+        const app = initializeApp(firebaseConfig);
+        const db = getDatabase(app);
+        const ucapanRef = ref(db, "ucapan");
+
+        const form = document.getElementById("formUcapan");
+        const inputNama = document.getElementById("inputNama");
+        const inputPesan = document.getElementById("inputPesan");
+        const btnKirim = document.getElementById("btnKirim");
+        const status = document.getElementById("statusUcapan");
+        const daftar = document.getElementById("daftarUcapan");
+
+        // Isi otomatis nama dari ?nama=... bila ada
+        const namaUrl = new URLSearchParams(window.location.search).get("nama");
+        if (namaUrl) inputNama.value = namaUrl;
+
+        // Kirim ucapan
+        form.addEventListener("submit", async (e) => {
+            e.preventDefault();
+            const nama = inputNama.value.trim();
+            const pesan = inputPesan.value.trim();
+            if (!nama || !pesan) return;
+
+            btnKirim.disabled = true;
+            status.textContent = "Mengirim...";
+            status.className = "small mt-2 mb-0 text-center text-light";
+            try {
+                await push(ucapanRef, { nama, pesan, waktu: serverTimestamp() });
+                inputPesan.value = "";
+                status.textContent = "Terima kasih, ucapan Anda terkirim.";
+                status.className = "small mt-2 mb-0 text-center text-success";
+            } catch (err) {
+                console.error(err);
+                status.textContent = "Gagal mengirim. Coba lagi.";
+                status.className = "small mt-2 mb-0 text-center text-danger";
+            }
+            btnKirim.disabled = false;
+        });
+
+        // Tampilkan ucapan secara realtime (100 terbaru, terbaru di atas)
+        const q = query(ucapanRef, orderByChild("waktu"), limitToLast(100));
+        onValue(q, (snapshot) => {
+            const items = [];
+            snapshot.forEach((child) => items.push(child.val()));
+            items.reverse();
+
+            daftar.innerHTML = "";
+            if (items.length === 0) {
+                const kosong = document.createElement("p");
+                kosong.className = "text-center text-secondary";
+                kosong.textContent = "Belum ada ucapan. Jadilah yang pertama!";
+                daftar.appendChild(kosong);
+                return;
+            }
+
+            items.forEach((u) => {
+                const card = document.createElement("div");
+                card.className = "card bg-dark text-light border-secondary mb-2";
+
+                const body = document.createElement("div");
+                body.className = "card-body py-2 px-3";
+
+                const nama = document.createElement("strong");
+                nama.textContent = u.nama;
+
+                const pesan = document.createElement("p");
+                pesan.className = "mb-1 mt-1";
+                pesan.style.whiteSpace = "pre-wrap";
+                pesan.textContent = u.pesan;
+
+                const waktu = document.createElement("small");
+                waktu.className = "text-secondary";
+                if (u.waktu) {
+                    waktu.textContent = new Date(u.waktu).toLocaleString("id-ID", {
+                        day: "numeric", month: "short", year: "numeric",
+                        hour: "2-digit", minute: "2-digit"
+                    });
+                }
+
+                body.append(nama, pesan, waktu);
+                card.appendChild(body);
+                daftar.appendChild(card);
+            });
+        }, (err) => {
+            console.error(err);
+            daftar.innerHTML = '<p class="text-center text-danger">Ucapan belum bisa dimuat.</p>';
+        });
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

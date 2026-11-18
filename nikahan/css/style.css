@@ -1,0 +1,151 @@
+html,
+body{
+    background-color: #222220 !important;
+}
+text{
+    text-align: center;
+    color: aliceblue;
+}
+h1{
+    color: #FFF;
+    font-family: Poppins;
+    font-style: normal;
+    line-height: normal;
+    text-align: center;
+    font-weight: 275;
+}
+h2{
+    color: #FFF;
+    font-family: Great Vibes;
+    font-style: normal;
+    line-height: normal;
+    text-align: center;
+}
+h3{
+    color: #FFF;
+    font-family: Great Vibes;
+    font-style: normal;
+    line-height: normal;
+    text-align: center;
+}
+p{
+    color: #FFF;
+    font-family: Poppins;
+    font-style: normal;
+    line-height: normal;
+    text-align: center;
+}
+.text1{
+    color: #FFF;
+    text-align: center;
+    font-family: Great Vibes;
+}
+.bg1{
+    background-color: #292927;
+    border-radius: 30px;
+}
+.tombol { position: fixed; bottom: 15px; right: 10px; }
+
+#toggleButton {
+    position: fixed; /* Tombol tetap di posisi layar */
+    bottom: 20px;    /* Jarak dari bawah */
+    right: 20px;     /* Jarak dari kanan */
+    z-index: 1000;   /* Agar selalu di atas elemen lainnya */
+}
+
+#toggleButton img {
+    width: 30px; /* Ukuran ikon */
+    height: 30px;
+}
+
+#stopScrollButton {
+    position: fixed; /* Tombol tetap di posisi layar */
+    bottom: 20px;    /* Jarak dari bawah */
+    right: 70px;     /* Jarak dari kanan, menyesuaikan posisi tombol */
+    z-index: 1000;   /* Agar selalu di atas elemen lainnya */
+    width: 30px;     /* Ukuran tombol */
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#scrollToggleButton {
+    position: fixed; /* Tombol tetap di posisi layar */
+    bottom: 20px;    /* Jarak dari bawah */
+    right: 70px;     /* Jarak dari kanan, menyesuaikan posisi tombol */
+    z-index: 1000;   /* Agar selalu di atas elemen lainnya */
+    width: 40px;     /* Ukuran tombol */
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#scrollToggleButton i {
+    font-size: 20px; /* Ukuran ikon */
+}
+
+/* ================= TAMBAHAN BARU ================= */
+
+/* Layar pembuka "Buka Undangan" */
+#cover {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 2000;
+    background-color: #222220;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 24px;
+    transition: opacity 0.7s ease, visibility 0.7s ease;
+}
+
+#cover.tutup {
+    opacity: 0;
+    visibility: hidden;
+}
+
+#cover .judul {
+    font-family: Great Vibes;
+    font-size: 2.6rem;
+    line-height: 1.2;
+}
+
+body.cover-aktif {
+    overflow: hidden;
+}
+
+/* Foto mempelai */
+.foto-mempelai {
+    max-height: 600px;
+    object-fit: cover;
+}
+
+/* Peta Google Maps */
+.peta {
+    width: 100%;
+    height: 450px;
+    border: 0;
+}
+
+/* Kartu rekening */
+.kartu-rekening {
+    max-width: 420px;
+}
+
+/* Daftar ucapan */
+#daftarUcapan {
+    max-height: 450px;
+    overflow-y: auto;
+}
+
+/* Ikon yang disembunyikan di awal (diatur lewat JavaScript) */
+#pauseIcon,
+#scrollStartIcon {
+    display: none;
+}
