@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="id">
 
@@ -125,6 +126,7 @@
                         <img src="img/imgnv.png" alt="" class="col-12" />
                     </div>
                 </div>
+
                 <div class="row mx-auto">
                     <div class="col-sm-9 mx-auto mt-5">
                         <p>
@@ -134,17 +136,20 @@
                         </p>
                     </div>
                 </div>
+
                 <div class="row mx-auto">
                     <div class="col-sm-10 mx-auto mt-3">
                         <h1 class="text1 mt-1">Sabtu, 12 Desember 2026</h1>
                         <h1 class="text1 mt-1">Pukul 17.00 Wita - Selesai</h1>
                     </div>
                 </div>
+
                 <div class="row mx-auto">
                     <div class="col-sm-10 mx-auto mt-3 mb-5">
                         <h3 class="text1 mt-1">Dasan Tapen, Kec. Gerung, Kabupaten Lombok Barat, Nusa Tenggara Bar. 83363</h3>
                     </div>
                 </div>
+
                 <!-- lokasi -->
                 <div class="row mx-auto">
                     <div class="col-xl-2 mx-auto">
@@ -155,12 +160,13 @@
                         </a>
                     </div>
                 </div>
-                <!-- lokasi -->
+
                 <div class="row mx-auto">
                     <div class="col mx-auto">
                         <p class="text-center">lokasi</p>
                     </div>
                 </div>
+
                 <div class="row mx-auto">
                     <div class="col-md-9 mx-auto mb-5 mt-3">
                         <iframe class="peta"
@@ -169,6 +175,7 @@
                             referrerpolicy="no-referrer-when-downgrade"></iframe>
                     </div>
                 </div>
+
                 <div class="row mx-auto">
                     <div class="col-sm-9 mx-auto">
                         <p class="fs-3">
@@ -176,6 +183,7 @@
                         </p>
                     </div>
                 </div>
+
                 <div class="row mx-auto mt-2">
                     <div class="col-sm-10 mx-auto">
                         <img src="img/imgnv2.png" alt="" class="col-12" />
@@ -214,7 +222,7 @@
                     </div>
 
                     <!-- Rekening ke-2 (hapus blok ini kalau tidak perlu) -->
-                    
+
                 </div>
             </div>
 
@@ -251,6 +259,7 @@
             <i id="scrollStopIcon" class="fa-solid fa-scroll"></i>
             <i id="scrollStartIcon" class="fa-solid fa-stop"></i>
         </button>
+
         <audio id="myAudio" preload="auto" loop>
             <source src="music/music.mp3" type="audio/mpeg" />
             Your browser does not support the audio element.
@@ -267,10 +276,16 @@
         </div>
     </div>
 
+    <!-- SCRIPT NAMA PENERIMA -->
     <script>
-        // Nama tamu dari URL (?nama=...)
-        const paramNama = new URLSearchParams(window.location.search).get("nama");
-        const namaTamu = paramNama && paramNama.trim() !== "" ? paramNama.trim() : "Tamu Undangan";
+        // Mendukung link ?to=Nama dan link lama ?nama=Nama
+        const paramsNama = new URLSearchParams(window.location.search);
+        const paramNama = paramsNama.get("to") || paramsNama.get("nama");
+
+        const namaTamu = paramNama && paramNama.trim() !== ""
+            ? paramNama.trim()
+            : "Tamu Undangan";
+
         document.getElementById("nama").textContent = namaTamu;
         document.getElementById("namaCover").textContent = namaTamu;
 
@@ -279,17 +294,20 @@
             btn.addEventListener("click", async () => {
                 const teks = document.getElementById(btn.dataset.target).textContent.trim();
                 const asli = btn.innerHTML;
+
                 try {
                     await navigator.clipboard.writeText(teks);
                     btn.innerHTML = '<i class="fa-solid fa-check me-1"></i> Tersalin';
                 } catch (e) {
                     btn.innerHTML = "Salin manual";
                 }
+
                 setTimeout(() => (btn.innerHTML = asli), 1800);
             });
         });
     </script>
 
+    <!-- SCRIPT MUSIK DAN AUTO SCROLL -->
     <script>
         document.addEventListener("DOMContentLoaded", function () {
             const cover = document.getElementById("cover");
@@ -310,6 +328,7 @@
                 playIcon.style.display = "none";
                 pauseIcon.style.display = "inline";
             };
+
             const tampilPause = () => {
                 playIcon.style.display = "inline";
                 pauseIcon.style.display = "none";
@@ -334,8 +353,10 @@
             // Auto scroll
             const startScrolling = () => {
                 clearInterval(scrollInterval);
+
                 scrollInterval = setInterval(() => {
                     window.scrollBy({ top: 1, behavior: "smooth" });
+
                     if (window.innerHeight + window.pageYOffset >= document.body.offsetHeight) {
                         clearInterval(scrollInterval);
                     }
@@ -354,17 +375,18 @@
                     scrollStopIcon.style.display = "inline";
                     scrollStartIcon.style.display = "none";
                 }
+
                 isScrolling = !isScrolling;
             });
 
-            // Hentikan auto scroll otomatis saat tamu mulai mengisi form
+            // Hentikan auto scroll saat tamu mulai mengisi form
             document.addEventListener("focusin", function (e) {
                 if (e.target.matches("#formUcapan input, #formUcapan textarea") && isScrolling) {
                     scrollToggleButton.click();
                 }
             });
 
-            // Tombol "Buka Undangan": musik otomatis nyala + auto scroll mulai
+            // Tombol Buka Undangan
             btnBuka.addEventListener("click", function () {
                 audio.play().then(() => {
                     tampilPlay();
@@ -381,7 +403,7 @@
         });
     </script>
 
-    <!-- Ucapan realtime (Firebase Realtime Database) -->
+    <!-- UCAPAN REALTIME (FIREBASE REALTIME DATABASE) -->
     <script type="module">
         import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js";
         import {
@@ -408,41 +430,58 @@
         const status = document.getElementById("statusUcapan");
         const daftar = document.getElementById("daftarUcapan");
 
-        // Isi otomatis nama dari ?nama=... bila ada
-        const namaUrl = new URLSearchParams(window.location.search).get("nama");
-        if (namaUrl) inputNama.value = namaUrl;
+        // Isi otomatis nama dari URL (?to=...) atau format lama (?nama=...)
+        const paramsUcapan = new URLSearchParams(window.location.search);
+        const namaUrl = paramsUcapan.get("to") || paramsUcapan.get("nama");
+
+        if (namaUrl && namaUrl.trim() !== "") {
+            inputNama.value = namaUrl.trim();
+        }
 
         // Kirim ucapan
         form.addEventListener("submit", async (e) => {
             e.preventDefault();
+
             const nama = inputNama.value.trim();
             const pesan = inputPesan.value.trim();
+
             if (!nama || !pesan) return;
 
             btnKirim.disabled = true;
             status.textContent = "Mengirim...";
             status.className = "small mt-2 mb-0 text-center text-light";
+
             try {
-                await push(ucapanRef, { nama, pesan, waktu: serverTimestamp() });
+                await push(ucapanRef, {
+                    nama,
+                    pesan,
+                    waktu: serverTimestamp()
+                });
+
                 inputPesan.value = "";
                 status.textContent = "Terima kasih, ucapan Anda terkirim.";
                 status.className = "small mt-2 mb-0 text-center text-success";
+
             } catch (err) {
                 console.error(err);
                 status.textContent = "Gagal mengirim. Coba lagi.";
                 status.className = "small mt-2 mb-0 text-center text-danger";
             }
+
             btnKirim.disabled = false;
         });
 
-        // Tampilkan ucapan secara realtime (100 terbaru, terbaru di atas)
+        // Tampilkan 100 ucapan terbaru secara realtime
         const q = query(ucapanRef, orderByChild("waktu"), limitToLast(100));
+
         onValue(q, (snapshot) => {
             const items = [];
+
             snapshot.forEach((child) => items.push(child.val()));
             items.reverse();
 
             daftar.innerHTML = "";
+
             if (items.length === 0) {
                 const kosong = document.createElement("p");
                 kosong.className = "text-center text-secondary";
@@ -468,10 +507,14 @@
 
                 const waktu = document.createElement("small");
                 waktu.className = "text-secondary";
+
                 if (u.waktu) {
                     waktu.textContent = new Date(u.waktu).toLocaleString("id-ID", {
-                        day: "numeric", month: "short", year: "numeric",
-                        hour: "2-digit", minute: "2-digit"
+                        day: "numeric",
+                        month: "short",
+                        year: "numeric",
+                        hour: "2-digit",
+                        minute: "2-digit"
                     });
                 }
 
@@ -479,6 +522,7 @@
                 card.appendChild(body);
                 daftar.appendChild(card);
             });
+
         }, (err) => {
             console.error(err);
             daftar.innerHTML = '<p class="text-center text-danger">Ucapan belum bisa dimuat.</p>';
@@ -486,8 +530,8 @@
     </script>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        integrity="sha384-C6RzsynM9kDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
         crossorigin="anonymous"></script>
-</body>
 
+</body>
 </html>
